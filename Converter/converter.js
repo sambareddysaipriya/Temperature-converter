@@ -1,14 +1,14 @@
 function main(){
-    var i=document.getElementById("inputnum").value;
+    let i=parseFloat(document.getElementById("inputnum").value);
     let f=document.getElementById("from").value;
     let t=document.getElementById("to").value;
-    let r=0;
+    let r=parseFloat(0);
     if(f==="Celsius"){
         if(t==="Fahrenheit"){
-            r=((9/5)*i)+32;
+            r=(1.8*i)+32;
         }
         else if(t==="Kelvin"){
-            r=i+273;
+            r=i+273.15;
         }
         else if(t==="Rankine"){
             r=(i*(9/5))+491.67;
@@ -19,10 +19,21 @@ function main(){
             r=(5/9)*(i-32);
         }
         else if(t==="Kelvin"){
-            r=i-273;
+            r=(i-32)*(5/9)+273.15;
         }
         else if(t==="Rankine"){
             r=i+459.67;
+        }
+    }
+    else if(f==="Kelvin"){
+        if(t==="Celsius"){
+            r=i-273.15;
+        }
+        else if(t==="Fahrenheit"){
+            r=(i-273.15)*(1.8)+32;
+        }
+        else if(t==="Rankine"){
+            r=(1.8)*i;
         }
     }
     else if(f==="Rankine"){
