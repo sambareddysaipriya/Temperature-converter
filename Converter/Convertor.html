@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <title>Temperature Conventor</title>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="converter.js"></script>
+    </head>
+    <body>
+        <section>
+            <div class="div1">
+                <form>
+                    <h1 style="font-size: 80%;margin-left: 18%;margin-bottom: 20px;"><i>TEMPERATURE CONVERTER</i></h1>
+                    <label>Temperature:<p style="color:red;font-size:30px;">*</p>
+                        <input type="number" id="inputnum" placeholder=" Enter temperature" required>
+                    </label>
+                    <label>From:<p style="color:red;font-size:30px;">*</p>
+                        <select id="from">
+                            <option>Select</option>
+                            <option value="Celsius">Celsius</option>
+                            <option value="Fahrenheit">Fahrenheit</option>
+                            <option value="Kelvin">Kelvin</option>
+                            <option value="Rankine">Rankine</option>
+                        </select>
+                    </label>
+                    <label>To:<p style="color:red;font-size:30px;">*</p>
+                        <select id="to" style="width:87%;">
+                            <option>Select</option>
+                            <option value="Celsius">Celsius</option>
+                            <option value="Fahrenheit">Fahrenheit</option>
+                            <option value="Kelvin">Kelvin</option>
+                            <option value="Rankine">Rankine</option>
+                        </select>
+                    </label> 
+                    <button onclick="main()">Calculate</button>
+                    <label>Result:
+                        <input type="number" id="result" placeholder=" Converted value" style="width: 80%;" readonly>
+                    </label>
+                </form>
+            </div>
+        </section>
+    </body>
+</html>
